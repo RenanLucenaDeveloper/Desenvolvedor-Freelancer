@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <img src="./img/linha-bg.svg" alt="linha-bg" id="linha-bg">
+    <div id="first-sight"><p>Sites personalizados com até <span class="texto-amarelo">20% de desconto</span></p></div>
+    <header>
+        <a href="#" class="logo"><img src="./img/logo.svg" alt="logomarca"></a>
+        <nav>
+            <ul>
+                <li><a href="#contato">Contato</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#" data-modal="abrir">Encomendar</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="intro">
+        <h1>Programador / Designer<br>Front end Developer</h1>
+    </section>
+    <section id="sobre">
+        <div class="container">
+            <div id="call-action">
+                <h2>Recomendado</h2>
+                <ul>
+                    <li><p>Proteção SSL</p></li>
+                    <li><p>Servidores de qualidade</p></li>
+                    <li><p>Contato direto com o desenvolvedor</p></li>
+                </ul>
+                <h3>Preco R$</h3>
+                <button data-modal="abrir">Encomendar</button>
+            </div>
+            <div id="lista"> 
+                <h1>Um site pode <span class="texto-amarelo">impulsio<br>nar</span> a sua empresa</h1>
+                <ul>
+                    <li><p><img src="./img/rocket.svg" alt="foguete">Sites Rapidos e completamente responsivos</p></li>
+                    <li><p><img src="./img/edit.svg" alt="icone de edição">Customizáveis e com elegância</p></li>
+                    <li><p><img src="./img/eye-slash.svg" alt="icone de acessibilidade">Acessibilidade aprimorada para leitores de tela</p></li>
+                    <li><a href="#contato">Entre em contato comigo</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section id="contato">
+        <h1>Contato</h1>
+        <div class="container">
+            <div id="form-contato">
+                <form action="contato">
+                    <label for="nome">Nome</label>
+                    <input type="name" name="nome" class="email" placeholder="Renan Lucena dos Santos">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" class="email" placeholder="ReenanDeveloper@hotmail.com">
+                    <label for="mensagem">Mensagem</label>
+                    <input type="text" name="mensagem" class="mensagem">
+                </form>
+                <button>Enviar</button>
+            </div>
+            <div id="info">
+                <div id="telefone">
+                    <h2>Telefone</h2>
+                    <p>+55 (11) 96568-3640</p>
+                </div>
+                <div id="email">
+                    <h2>Email</h2>
+                    <p>ReenanDeveloper@hotmail.com</p>
+                </div>
+                <div id="redes">
+                    <h2>Redes</h2>
+                        <ul>
+                            <li><a href="https://github.com/RenanLucenaDeveloper" target="_blank" class="botao-redes"><img src="./img/github.svg" alt="github"></a></li>
+                            <li><a href="https://www.linkedin.com/in/renan-lucena-811491214/" target="_blank" class="botao-redes"><img src="./img/linkedin.svg" alt="linkedin"></a></li>
+                        </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <a href="#" class="logo"><img src="./img/logo-claro.svg" alt="logomarca"></a>
+            <p>© Renan Lucena dos Santos - Todos os direitos reservados</p>
+            <nav id="nav-footer">
+                <ul>
+                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#" data-modal="abrir">Encomendar</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+    <section class="modal-container" data-modal="container">
+        <div class="modal" data-modal="modal">
+            <button data-modal="fechar" class="fechar">X</button>
+            <div class="header-black">
+                <h2>Encomendar</h2>
+                <p>entre em contato comigo pelo <span class="texto-amarelo">Whatsapp</span>,<br> <span class="texto-amarelo">Telegram</span> ou <span class="texto-amarelo">Discord</span></p>
+            </div>
+            <div id="info-modal">
+                <div id="telefone">
+                    <h2>Número / Telefone</h2>
+                    <p>+55 (11) 96568-3640</p>
+                </div>
+                <div id="email">
+                    <h2>Email</h2>
+                    <p>ReenanDeveloper@hotmail.com</p>
+                </div>
+                <div id="discord">
+                    <h2>Discord</h2>
+                    <p>RenanDeveloper#1329</p>
+                </div>
+                <div id="redes">
+                    <h2>Redes</h2>
+                        <ul>
+                            <li><a href="https://github.com/RenanLucenaDeveloper" target="_blank" class="botao-redes"><img src="./img/github.svg" alt="github"></a></li>
+                            <li><a href="https://www.linkedin.com/in/renan-lucena-811491214/" target="_blank" class="botao-redes"><img src="./img/linkedin.svg" alt="linkedin"></a></li>
+                        </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="./javascript/script.js"></script>
+</body>
+</html>
