@@ -1,5 +1,6 @@
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -13,6 +14,7 @@ body {
     top: 150px;
     left: 20vw;
     z-index: -1;
+    overflow-x: hidden;
 }
 
 .texto-amarelo {
@@ -38,6 +40,7 @@ button::after {
     height: 11px;
     background: url(../img/seta-branca.svg) no-repeat center;
     background-size: cover;
+    transition: .3s;
 }
 
 button:hover {
@@ -190,6 +193,10 @@ nav ul li a:hover {
     font-size: 1.5rem;
 }
 
+#call-action button:hover {
+    background-color: #222;
+}
+
 #lista h1 {
     font-size: 3rem;
     font-weight: bold;
@@ -263,6 +270,7 @@ nav ul li a:hover {
     padding: 60px;
     margin-bottom: 120px;
     box-shadow: 20px 20px 0 rgba(0,0,0,.15);
+    max-width: 600px;
 }
 
 form {
@@ -276,7 +284,7 @@ form label {
 }
 
 form input {
-    margin: 20px auto 40px auto;
+    margin: 20px 0 40px 0;
     width: 520px;
     border: none;
     border-radius: 6px;
@@ -301,6 +309,10 @@ form input::placeholder {
     padding: .7rem 1.2rem;
     font-weight: bold;
     font-size: 1.5rem;
+}
+
+#contato button:hover {
+    background-color: #222;
 }
 
 #info {
@@ -483,12 +495,95 @@ footer #nav-footer ul {
     gap: 20px;
 }
 
+@media screen and (max-width:1600px) {
+
+    #linha-bg {
+        left: 15vw;
+    }
+
+    header {
+        max-width: 1300px;
+    }
+
+    #sobre .container {
+        max-width: 1300px;
+    }
+
+    #contato .container{
+        max-width: 1300px;
+        gap: 60px;
+    }
+
+    #contato #form-contato {
+        margin-bottom: 60px;
+    }
+
+    #info {
+        margin: 0 auto 60px 0;
+    }
+    
+    form input {
+        width: 430px;
+    } 
+
+    footer .container {
+        min-width: 1300px;
+        max-width: 1300px;
+    }
+
+}
+
+@media screen and (max-width:1350px) {
+    
+    header {
+        max-width: 1200px;
+    }
+
+    #sobre .container {
+        max-width: 700px;
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    #contato .container{
+        max-width: 600px;
+        flex-direction: column;
+    }
+    
+    footer {
+        padding: 60px;
+    }
+
+    footer .container {
+        min-width: 80vw;
+        max-width: 80vw;
+        justify-content: unset;
+        align-items: center;
+        flex-direction: column;
+        margin: 0;
+        gap: 3rem;
+    }
+
+    .nav-footer {
+        order: 1;
+    }
+
+    #nav-footer {
+        order: 1;
+    }
+
+    footer .container p {
+        order: 2;
+    }
+}
+
 @media screen and (max-width:768px) {
 
     #linha-bg {
         top: 300px;
-        left: 0;
+        left: 0vw;
         z-index: -1;
+        max-width: 100vw;
     }
 
     h1 {
@@ -642,4 +737,75 @@ footer #nav-footer ul {
     footer .container p {
         order: 2;
     }
+}
+
+@media screen and (max-width:600px) {
+
+    #call-action {
+        padding: 60px;
+    }
+}
+
+@media screen and (max-width:500px) {
+
+    #call-action {
+        padding: 60px 30px;
+    }
+
+    #call-action ul li::after {
+        width: 250px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
+
+@media screen and (max-width:500px) {
+
+    #first-sight p{
+        font-size: 1rem !important;
+        text-align: left;
+    }
+
+    header {
+        flex-direction: row;
+        padding-left: 20px;
+        padding-right: 20px;
+        justify-content: space-between;
+    }
+
+    nav ul{
+        flex-direction: column;
+        gap: 10px;
+        text-align: right;
+    }
+
+    nav ul li a {
+        padding: .8rem .5rem;
+    }
+
+    #linha-bg {
+        display: none;
+    }
+    
+    #call-action h2 {
+        font-size: 1.25rem;
+    }
+    
+    #call-action ul li p {
+        font-size: .8rem !important;
+    }
+    
+    #call-action h3 {
+        font-size: 1.25rem;
+    }
+    
+    #call-action button {
+        font-size: 1.25rem;
+    }
+
+    footer #nav-footer li{
+        text-align: center;
+    }
+    
 }
