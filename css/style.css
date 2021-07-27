@@ -56,6 +56,7 @@ button:hover {
 
 #first-sight p {
     font-size: 1.125rem;
+    font-weight: bold;
 }
 
 header {
@@ -345,13 +346,13 @@ form input::placeholder {
 /* Footer */
 
 footer {
-    width: 100vw;
     background-color: #000;
     padding: 60px;
     color: #fff;
 }
 
 footer .container {
+    min-width: 1400px;
     max-width: 1400px;
     display: flex;
     justify-content: space-between;
@@ -374,6 +375,7 @@ footer #nav-footer ul {
 }
 
 /* Modal */
+
 .modal h2 {
     font-size: 2rem;
     font-weight: bold;
@@ -390,10 +392,22 @@ footer #nav-footer ul {
     align-items: center;
     justify-content: center;
     background-color: rgba(0,0,0,.7);
+    animation: toRight .3s forwards;
 }
 
 .modal-container.ativo {
     display: flex;
+}
+
+@keyframes toRight {
+    from {
+        opacity: 0;
+        transform: translate3d(-30px,0,0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0,0,0);
+    }
 }
 
 .modal {
@@ -420,8 +434,21 @@ footer #nav-footer ul {
 
 .modal .fechar {
     position: absolute;
+    display: block;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 100%;
+    color: #FBBA25;
+    background-color: #000;
+    border: 2px solid #fff;
+    font-weight: bold;
+    font-size: 1.5rem;
     top: -20px;
     right: -20px;
+}
+
+.modal .fechar::after {
+    display: none;
 }
 
 #info-modal {
@@ -454,4 +481,165 @@ footer #nav-footer ul {
 #redes ul {
     display: flex;
     gap: 20px;
+}
+
+@media screen and (max-width:768px) {
+
+    #linha-bg {
+        top: 300px;
+        left: 0;
+        z-index: -1;
+    }
+
+    h1 {
+        font-size: 2rem !important;
+    }
+
+    p {
+        font-size: 1rem !important;
+    }
+
+    /* Header */
+    
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: unset;
+        flex-direction: column;
+        gap: 2rem;
+        padding: 2rem 0;
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+    
+    nav ul{
+        gap: .1rem;
+    }
+
+    /* Intro */
+
+    #intro h1 {
+        margin: 80px 0 150px 0;
+    }
+
+    /* Sobre */
+
+    #sobre {
+        padding: 200px 0 100px 0;;
+        margin-bottom: 120px;
+    }
+
+    #sobre .container {
+        justify-content: unset;
+        flex-direction: column;
+        gap: 4rem;
+        max-width: 80vw;
+    }
+
+    #call-action {
+        padding: 60px 120px;
+        box-shadow: 10px 10px 0 rgba(0,0,0,.10);
+    }
+
+    #call-action h2 {
+        font-size: 1.75rem;
+        margin-bottom: 3rem;
+    }
+
+    #call-action h3 {
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    #lista h1::after {
+        width: 60vw;
+    }
+
+    #lista ul li::after {
+        width: 60vw;
+    }
+
+    #lista ul li:last-child {
+        font-size: 1.25rem;
+    }
+
+    /* Contato */
+
+    #contato .container{
+        justify-content: unset;
+        flex-direction: column;
+        max-width: 80vw;
+    }
+
+    #contato h1 {
+        margin-bottom: 60px;
+    }
+
+    #contato #form-contato {
+        padding: 40px;
+        margin-bottom: 100px;
+    }
+
+    form label {
+        font-size: 1.125rem;
+    }
+
+    form input {
+        margin: 20px 0 40px 0;
+        width: 90%;
+    } 
+
+    form input::placeholder {
+        color: #8F8F8F;
+    }
+
+    #contato button {
+        font-size: 1.25rem;
+    }
+
+    #info {
+        margin-top: 0;
+        margin-bottom: 100px;
+    }
+
+    #info h2 {
+        font-size: 1.25rem;
+    }
+
+    #info p {
+        font-size: 1.25rem;
+    }
+
+    #info div::after {
+        width: 70vw;
+    }
+
+    /* Footer */
+
+    footer {
+        padding: 60px;
+    }
+
+    footer .container {
+        min-width: 80vw;
+        max-width: 80vw;
+        justify-content: unset;
+        align-items: center;
+        flex-direction: column;
+        margin: 0;
+        gap: 3rem;
+    }
+
+    .nav-footer {
+        order: 1;
+    }
+
+    #nav-footer {
+        order: 1;
+    }
+
+    footer .container p {
+        order: 2;
+    }
 }
